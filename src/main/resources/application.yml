@@ -1,0 +1,20 @@
+server:
+  port: 80 # 서버 포트 설정
+
+spring:
+  thymeleaf:
+    cache: false
+    encoding: UTF-8
+    prefix: classpath:templates/
+    mode: HTML
+    suffix: .html 
+  datasource:
+    # ⚠️ localhost가 실제 DB 서버 주소인지 확인하세요.
+    url: jdbc:oracle:thin:@localhost:1521:XE 
+    username: hr
+    password: happy
+    driver-class-name: oracle.jdbc.driver.OracleDriver
+
+mybatis:
+  type-aliases-package: com.sist.seb.vo 
+  mapper-locations: classpath:mybatis/mapper/*.xml 
